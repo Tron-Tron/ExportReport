@@ -19,7 +19,7 @@ class App extends React.Component {
         response.blob().then((blob) => {
           let url = window.URL.createObjectURL(blob);
           this._hiddenLink.href = url;
-          this._hiddenLink.download = `Login-History-Report `;
+          this._hiddenLink.download = `Login-History-Report-${Date.now()} `;
           this._hiddenLink.click();
         });
       })
